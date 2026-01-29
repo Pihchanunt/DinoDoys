@@ -6,6 +6,8 @@ The homepage also showcases recommended products and product categories, each re
 <img width="1919" height="717" alt="image" src="https://github.com/user-attachments/assets/b7d210f3-c365-4843-9e18-58cbec1c20e1" />
 the Categories page, users can browse all available products with a built-in filtering system, including options such as Show All, Sale, New, Cars, Dolls, Figures, and Legos, making product discovery fast and intuitive.
 <img width="1919" height="884" alt="image" src="https://github.com/user-attachments/assets/ec92abe3-5d02-4080-b4a9-0d5c4c3531ec" />
+Users can inspect each product in detail by clicking on individual items, which opens a product detail page displaying comprehensive information such as images, pricing, and descriptions.
+<img width="1919" height="885" alt="image" src="https://github.com/user-attachments/assets/76a9622c-b902-48c7-b624-347c94df0d24" />
 The website includes a floating cart feature that displays selected items with real-time updates on prices and quantities. Users can conveniently add or remove products directly from the cart.
 <img width="1919" height="883" alt="image" src="https://github.com/user-attachments/assets/6d1f965a-5385-49c2-a242-d4efa382d333" />
 Upon clicking checkout, a summary page is presented where users can review and edit their cart before completing the purchase, ensuring accuracy and convenience throughout the shopping process.
