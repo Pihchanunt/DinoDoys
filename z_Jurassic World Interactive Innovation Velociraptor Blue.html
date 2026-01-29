@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DinoDoys</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="Toy.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <!-------------------------------------------------------------------------------->
+
+    <!--firstnav-->
+    <nav class="navbar sticky-top bg-body-tertiary">
+      <div class="container-fluid text-center">
+        
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2" id="navibarr">
+          <div class="col text-start" id="dinodoyslogonav">
+            <!--Dinodoys-->
+            <a class="navbar-brand" href="dinodoys_homepage.html"><img src="./img/IMG_0232.png" id="DinoDoys" alt="DinoDoys logo"></a>
+          </div>
+
+          <div class="col" id="searchandcart">
+            <div class="row justify-content-end">
+              
+              <div class="col-auto" id="cartcol">
+                <!--cart-->
+                <a class="cart" data-bs-toggle="modal" data-bs-target="#cartmodal"><img src="./img/cart.png" class="carticon" alt="cart"><span class="badge text-wrap" id="cartcount">0</span></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="secondnav">
+          <a class="nav-link" id="secondnavlink" href="dinodoys_homepage.html#categories">CATEGORIES</a>
+          <a class="nav-link" id="secondnavlink" href="dinodoys_storepage.html">STORE</a>
+          <a class="nav-link" id="secondnavlink" href="dinodoys_storepage.html?activatesale=true">SALE</a>
+          <a class="nav-link" id="secondnavlink" href="dinodoys_storepage.html?activatenew=true">NEW</a>
+      </div>
+
+    </nav>
+
+    <!-------------------------------------------------------------------------------->
+
+    <!--modal-->
+    <div class="modal fade" id="cartmodal" tabindex="-1" aria-labelledby="cartmodallabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="cartmodallabel">Shopping Cart</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" onclick="removeall()">Remove all items</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+            <a type="button" class="btn" href="dinodoys_checkout.html">Proceed to Check out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+
+    <div class="container" id="productdetail-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dinodoys_homepage.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="dinodoys_storepage.html">Store</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Jurassic World Interactive Innovation Velociraptor Blue</li>
+        </ol>
+      </nav>
+
+      <h1 class="product-title">Jurassic World Interactive Innovation Velociraptor Blue</h1>
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2">
+        <div class="col text-center">
+          <img id="mainImage" src="./toy_list/Jurassic World Interactive Innovation Velociraptor Blue.jpg" alt="Jurassic World Interactive Innovation Velociraptor Blue" class="product-image">
+          <div class="thumbnail-container justify-content-center">
+            <img src="./toy_list/Jurassic World Interactive Innovation Velociraptor Blue.jpg" alt="Thumbnail 1" class="thumbnail" 
+            onclick="changeImage('./toy_list/Jurassic World Interactive Innovation Velociraptor Blue.jpg')">
+            <img src="./toy_list/Jurassic World Interactive Innovation Velociraptor Blue 2.jpg" alt="Thumbnail 2" class="thumbnail" 
+            onclick="changeImage('./toy_list/Jurassic World Interactive Innovation Velociraptor Blue 2.jpg')">
+            <img src="./toy_list/Jurassic World Interactive Innovation Velociraptor Blue 3.jpg" alt="Thumbnail 3" class="thumbnail" 
+            onclick="changeImage('./toy_list/Jurassic World Interactive Innovation Velociraptor Blue 3.jpg')">
+            <img src="./toy_list/Jurassic World Interactive Innovation Velociraptor Blue 4.jpg" alt="Thumbnail 4" class="thumbnail" 
+            onclick="changeImage('./toy_list/Jurassic World Interactive Innovation Velociraptor Blue 4.jpg')">
+          </div>
+        </div>
+        <div class="col text-start">
+          <h2 class="product-price">฿2,295</h2>
+          <div class="rating_star">
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+          </div>
+          <div class="product-description">
+            <h2>Description</h2>
+            <p class="description-text">These new electronic dinosaur toys will thrill young dinosaur fans with roaring action, feeding play and entertaining sounds. As the right leg is moved farther and farther back, the roar sounds from the 7.7-inch long figure increase as the jaw opens wider and wider! A "snack" accessory encourages feeding play, which prompts chomping sounds, and even loud burps! Makes a fun gift for dinosaur lovers ages 4 years and older. Colors and decorations may vary.​​</p>
+          </div>
+          <button class="btn" onclick="addcart('Jurassic World Interactive Innovation Velociraptor Blue',2295)">Add to cart</button>
+        </div>
+      </div>
+
+       
+    </div>
+
+    <script src="Toy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

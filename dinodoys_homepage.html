@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DinoDoys</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="Toy.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <!-------------------------------------------------------------------------------->
+
+    <!--firstnav-->
+    <nav class="navbar sticky-top bg-body-tertiary">
+      <div class="container-fluid text-center">
+        
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-2" id="navibarr">
+          <div class="col text-start" id="dinodoyslogonav">
+            <!--Dinodoys-->
+            <a class="navbar-brand" href="dinodoys_homepage.html"><img src="./img/IMG_0232.png" id="DinoDoys" alt="DinoDoys logo"></a>
+          </div>
+
+          <div class="col" id="searchandcart">
+            <div class="row justify-content-end">
+              
+              <div class="col-auto" id="cartcol">
+                <!--cart-->
+                <a class="cart" data-bs-toggle="modal" data-bs-target="#cartmodal"><img src="./img/cart.png" class="carticon" alt="cart"><span class="badge text-wrap" id="cartcount">0</span></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="secondnav">
+          <a class="nav-link" id="secondnavlink" href="dinodoys_homepage.html#categoriessection">CATEGORIES</a>
+          <a class="nav-link" id="secondnavlink" href="dinodoys_storepage.html">STORE</a>
+          <a class="nav-link" id="secondnavlink" href="dinodoys_storepage.html?activatesale=true">SALE</a>
+          <a class="nav-link" id="secondnavlink" href="dinodoys_storepage.html?activatenew=true">NEW</a>
+      </div>
+
+    </nav>
+
+    <!-------------------------------------------------------------------------------->
+
+    <!--modal-->
+    <div class="modal fade" id="cartmodal" tabindex="-1" aria-labelledby="cartmodallabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="cartmodallabel">Shopping Cart</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" onclick="removeall()">Remove all items</button>
+            <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+            <a type="button" class="btn" href="dinodoys_checkout.html">Proceed to Check out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------->
+
+    <!--main-->
+    <main>
+
+      
+        <!--carousel banner-->
+        <div class="carousel slide" data-bs-ride="carousel" id="carouselbanner">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselbanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Pic1"></button>
+            <button type="button" data-bs-target="#carouselbanner" data-bs-slide-to="1" aria-label="Pic2"></button>
+            <button type="button" data-bs-target="#carouselbanner" data-bs-slide-to="2" aria-label="Pic3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/RECOMMENDED.png" id="banneropa" class="d-block w-100" alt="RECOMMEDED">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/NEW.png" id="banneropa" class="d-block w-100" alt="NEW">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/SALE.png" id="banneropa" class="d-block w-100" alt="SALE">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselbanner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselbanner" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!--main container-->
+        <div class="container text-center">
+
+          <h1 class="titles">RECOMMEDED</h1>
+
+            <!--row1-->
+          <div class="container text-center">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+
+              <div class="filterDiv Legos">
+                <div class="card">
+                    <img src="./toy_list/LEGO Jurassic World Baby Bumpy Ankylosaurus.jfif" class="card-img-top" alt="LEGO Jurassic World Baby Bumpy Ankylosaurus">
+                    <div class="card-body">
+                        <div class="rating_star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <a href="z_LEGO Jurassic World Baby Bumpy Ankylosaurus.html" class="card-title text-wrap">LEGO Jurassic World Baby Bumpy Ankylosaurus</a>
+                        <p class="card-text"><span>฿1,090</span></p>
+                        <button class="btn" onclick="addcart('LEGO Jurassic World Baby Bumpy Ankylosaurus',1090)">Add to cart</button>
+                    </div>
+                </div>
+              </div>
+
+              <div class="filterDiv Dolls">
+                <div class="card">
+                  <img src="./toy_list/World Animal Collection Dino Puppet( Grey).jpg" class="card-img-top" alt="World Animal Collection Dino Puppet( Grey)">
+                  <div class="card-body">
+                    <div class="rating_star">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
+                    <a href="z_World Animal Collection Dino Puppet( Grey).html" class="card-title text-wrap">World Animal Collection Dino Puppet( Grey)</a>
+                    <p class="card-text"><span>฿399</span></p>
+                    <button class="btn" onclick="addcart('World Animal Collection Dino Puppet( Grey)',399)">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filterDiv Cars">
+                <div class="card">
+                  <img src="./toy_list/Dino Might Dinosaur Big Head Monster Ride Assorted.jpg" class="card-img-top" alt="Dino Might Dinosaur Big Head Monster Ride">
+                  <div class="card-body">
+                    <div class="rating_star">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <a href="z_Dino Might Dinosaur Big Head Monster Ride Assorted.html" class="card-title text-wrap">Dino Might Dinosaur Big Head Monster Ride</a>
+                    <p class="card-text"><span>฿325</span></p>
+                    <button class="btn" onclick="addcart('Dino Might Dinosaur Big Head Monster Ride',325)">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filterDiv Dolls Sale">
+                <div class="card">
+                  <img src="./toy_list/Heroes of Goo Jit Zu Jurassic World Chomp Attack Blue.jpg" class="card-img-top" alt="Heroes of Goo Jit Zu Jurassic World Chomp Attack Blue">
+                  <div class="card-body">
+                    <div class="rating_star">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                    </div>
+                    <a href="z_Heroes of Goo Jit Zu Jurassic World Chomp Attack Blue.html" class="card-title text-wrap">Heroes of Goo Jit Zu Jurassic World Chomp Attack Blue</a>
+                    <p class="card-text"><s>฿995</s><span id="saleprice"> ฿200</span></p>
+                    <button class="btn" onclick="addcart('Heroes of Goo Jit Zu Jurassic World Chomp Attack Blue',200)">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <a href="dinodoys_storepage.html">
+              <button class="btn" id="gostore">Go to store page</button>
+            </a>
+
+          </div>
+
+
+          <!--categories-->
+          <div>
+
+            <h1 class="titles" id="categoriessection">CATEGORIES</h1>
+
+            <!--row1-->
+            <div class="row">
+
+              <div class="col">
+                <a href="dinodoys_storepage.html?activatelegos=true"><img class="iconsbutt" id="items" src="./img/lego.png" alt="lego"></a>
+                <p class="categories-text">LEGOS</p>
+              </div>
+
+              <div class="col">
+                <a href="dinodoys_storepage.html?activatefigures=true"><img class="iconsbutt" id="items" src="./img/figures.png" alt="figure"></a>
+                <p class="categories-text">FIGURES</p>
+              </div>
+
+              <div class="col">
+                <a href="dinodoys_storepage.html?activatedolls=true"><img class="iconsbutt" id="items" src="./img/dolls.png" alt="doll"></a>
+                <p class="categories-text">DOLLS</p>
+              </div>
+
+              <div class="col">
+                <a href="dinodoys_storepage.html?activatecars=true"><img class="iconsbutt" id="items" src="./img/cars.png" alt="car"></a>
+                <p class="categories-text">CARS</p>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      
+    </main>
+
+
+    <script src="Toy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
